@@ -8,6 +8,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import io.play.mvvmstudy.order_feature.domain.model.BoughtProduct
 import io.play.mvvmstudy.order_feature.domain.model.Order
 import io.play.mvvmstudy.order_feature.domain.repository.OrderRepository
 import io.play.mvvmstudy.order_feature.presentation.mapper.toOrderDetailListItem
@@ -38,6 +39,22 @@ class OrderViewModel @Inject constructor(
         viewModelScope.launch {
             orders = orderRepository.getOrders()
             setupOrderList()
+//            orderRepository.insertOrder(
+//                Order(
+//                    "1",
+//                    "2022.10.15 12:05:12",
+//                    delivererTime = "As fast as possible",
+//                    "Paper Factory Ltd",
+//                    listOf(
+//                        BoughtProduct(
+//                            "1",
+//                            "Note book",
+//                            1.23f,
+//                            2
+//                        )
+//                    )
+//                )
+//            )
         }
     }
 

@@ -6,7 +6,7 @@ import io.play.mvvmstudy.order_feature.domain.model.Order
 fun Order.toOrderEntity(delivererName:String): OrderEntity {
     return OrderEntity(
         orderId = orderId,
-        data = date,
+        date = date,
         delivererName = delivererName,
         delivererTime = delivererTime
     )
