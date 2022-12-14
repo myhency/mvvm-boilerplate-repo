@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class OrderEntity(
     @PrimaryKey val orderId:String,
-    val data:String,
+    val date:String,
     val delivererTime:String,
     val delivererName:String
 )
